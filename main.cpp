@@ -1,28 +1,23 @@
 #include <iostream>
 
 int isPrime(int number);
-
+int numberToFactor(long long numberToFactor , int primes );
 
 using namespace std;
 
+
+
 int main() {
 
-    for(int i = 2 ; i < 100000000 ;i++){
+int loopIletrations = 10000;
+
+
+
+    for(int i = 2 ; i < loopIletrations ;i++){
 
         int result = isPrime(i) ;
 
-        if( 600851475143   % result == 0) {
-
-            if (result != -1) {
-            cout << result << endl;
-        }
-
-        }else{
-
-
-
-        }
-
+         numberToFactor( 600851475143 ,  result );
 
     }
     return 0;
@@ -40,4 +35,14 @@ int isPrime(int number) {
     }
 
     return number;
+}
+
+int numberToFactor(long long numberToFactor , int prime ){
+
+    if( numberToFactor   % prime == 0) {
+
+        if (prime != -1) {
+            cout << prime << endl;
+        }
+    }
 }
